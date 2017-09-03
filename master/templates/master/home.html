@@ -1,0 +1,7 @@
+{% extends "webapp/header.html" %}
+
+{% block content %}
+    {% for query in queryset %}
+        {{ query.id }} {{ query.type }} {{ query.actorid }} {{ query.repoid }} {{ query.payloadid }}
+    {% endfor %}
+{% endblock %}

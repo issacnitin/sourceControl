@@ -1,0 +1,16 @@
+EventTable
+    id, type, actorid, repoid, payloadid
+
+ActorTable
+    actorid, login, gravatar_id, url, avatar_url
+
+RepoTable
+    repoid, name, url
+
+PayloadTable
+    pushid, size, distinct_size, ref,head, before, commitid, public, created_at
+
+CommitTable
+    actorid, sha, email, name, message, distinct, url
+
+
