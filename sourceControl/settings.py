@@ -31,8 +31,6 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'webapp',
-    'blog',
     'master',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -78,8 +76,12 @@ WSGI_APPLICATION = 'sourceControl.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django_mongodb_engine',
-        'NAME': 'sourceControl'
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'sourceControl',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 
