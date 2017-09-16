@@ -1,0 +1,18 @@
+Your home page
+
+<form action="/logout/" method="get">
+    <input type="submit" value="Logout" />
+</form>
+
+<form action="/home/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Go" />
+</form>
+
+
+Major Interests: </br >
+{% for item in query_results %}
+        {{ item.name }}
+        {{ item.count }} <br />
+{% endfor %}
